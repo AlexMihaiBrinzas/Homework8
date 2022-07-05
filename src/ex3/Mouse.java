@@ -1,13 +1,28 @@
 package ex3;
 
 public class Mouse implements Animal {
-    public void walk(){
-        System.out.println();
+
+    public String walk;
+    public String talk;
+    public String eat;
+
+    public Mouse(String walk) {
+        this.walk = walk;
     }
-    public void talk(){
-        System.out.println();
+
+
+    @Override
+    public String walk() {
+        return "Duck-walking";
     }
-    public void eat(){
-        System.out.println();
+
+    @Override
+    public String talk() {
+        return null;
+    }
+
+    @Override
+    public String eat() {
+        return null;
     }
 }

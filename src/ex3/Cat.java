@@ -1,15 +1,26 @@
 package ex3;
 
-public class Cat implements Animal {
-    public void walk(){
-        System.out.println();
+public abstract class Cat implements Animal {
+
+    public  String walk;
+    //public String talk;
+    //public String eat;
+
+    public Cat(String walk) {
+        this.walk = walk;
     }
-    public void talk(){
-        System.out.println();
-    }
-    public void eat(){
-        System.out.println();
+    @Override
+    public String walk() {
+        return "cat-walking";
     }
 
+    @Override
+    public String talk() {
+        return null;
+    }
 
+    @Override
+    public String eat() {
+        return null;
+    }
 }

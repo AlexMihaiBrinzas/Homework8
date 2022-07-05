@@ -2,30 +2,36 @@ package ex3;
 
 public class Main {
     public static void main(String[] args) {
-        Cat mycat= new Cat();
-        mycat.walk();
-        mycat.talk();
-        mycat.eat();
+        Cat mycat= new Cat("cat-walking") {
+            @Override
+            public String talk() {
+                return null;
+            }
 
-        Dog mydog = new Dog();
-        mydog.walk();
-        mydog.talk();
-        mydog.eat();
+            @Override
+            public String eat() {
+                return null;
+            }
+        };
 
-        Mouse mymouse = new Mouse();
-        mymouse.walk();
-        mymouse.talk();
-        mymouse.eat();
+        System.out.println(mycat.walk());
 
-        Chicken mychicken = new Chicken();
-        mychicken.walk();
-        mychicken.talk();
-        mychicken.eat();
 
-        Duck myduck = new Duck();
-        myduck.walk();
-        myduck.talk();
-        myduck.eat();
+        Dog mydog = new Dog("dog-walking");
+
+        System.out.println(mydog.walk());
+
+
+        Mouse mymouse = new Mouse("mouse-walking");
+        System.out.println(mymouse.walk());
+
+
+        Chicken mychicken = new Chicken("chicken-walking");
+        System.out.println(mychicken.walk());
+
+        Duck myduck = new Duck("duck-walking");
+        System.out.println(myduck.walk());
+
 
     }
 }

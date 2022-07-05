@@ -1,8 +1,8 @@
 package ex3;
 
 public interface Animal {
-    public void walk();
-    public void talk();
-    public void eat();
+    public String walk();
+    public String talk();
+    public String eat();
 
 }
